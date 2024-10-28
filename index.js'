@@ -1,0 +1,35 @@
+let firstNumberip = document.getElementById("firstNumber");
+let secondNumberip = document.getElementById("secondNumber");
+let userInputip = document.getElementById("userInput");
+let gameResultip = document.getElementById("gameResult");
+let checkButton = document.getElementById("checkButton");
+let gameResult = document.getElementById("gameResult");
+
+let fval = firstNumberip.value;
+let sval = secondNumberip.value;
+let rval = gameResult.value;
+
+checkButton.onclick = function() {
+    let a = parseInt(fval);
+    let b = parseInt(sval);
+    let c = parseInt(rval);
+
+    if ((a + b) === c) {
+        gameResultip.textContent = "Congrats";
+        gameResult.classList.add("a");
+        console.log(gameResultip);
+    } else {
+        gameResultip.textContent = "Please Try Again!";
+        gameResult.classList.add("b");
+        console.log(gameResultip);
+    }
+}
+
+restartButton.onclick = function() {
+    let a = parseInt(fval);
+    let b = parseInt(sval);
+    let c = parseInt(rval);
+
+    c.textContent = "";
+    gameResultip.textContent = "";
+}
